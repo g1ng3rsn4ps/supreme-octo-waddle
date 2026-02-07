@@ -1,0 +1,4 @@
+.cart-free-shipping-message{margin-top:16px}
+@media screen and (min-width:750px){
+  .cart-free-shipping-message{margin-top:24px}
+}
