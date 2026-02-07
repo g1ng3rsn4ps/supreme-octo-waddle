@@ -14,10 +14,10 @@ INSTRUCTIONS:
 
 CART NOTIFICATION:
 
-Start by adding the coundown to in the cart itself. For Crave 15.4.1, I used the main-cart-footer.liquid file to display the coundown after the total value of the order and above the checkout for max visibility. For Crave, that happens to be between <div class="totals"> and <small class="tax-note caption-large rte">. My store's free shipping threshhold is $75.00, which Shopify wants in cents, which is 7,500; you can change this in the {% assign free_shipping_threshold = 7500 %} line. Remember to change the monetary value in the message body as well so that it matches.
+Start by adding the coundown to in the cart itself. For Crave 15.4.1, I used the main-cart-footer.liquid file to display the coundown after the total value of the order and above the checkout for max visibility. For Crave, that happens to be between div class="totals" and small class="tax-note caption-large rte". My store's free shipping threshhold is $75.00, which Shopify wants in cents, which is 7,500; you can change this in the % assign free_shipping_threshold = 7500 % line. Remember to change the monetary value in the message body as well so that it matches.
 
 Next, go to the component-cart.css file and append the CSS to the very end of the file.
 
 STICKY BANNER:
 
-Navigate to the theme.liquid file. Immediately after the first <body> tag for Crave/Dawn, insert the header liquid.  After, go to base.css and append the CSS to the very end of the file.
+Navigate to the theme.liquid file. Immediately after the first body tag for Crave/Dawn, insert the header liquid.  After, go to base.css and append the CSS to the very end of the file.
