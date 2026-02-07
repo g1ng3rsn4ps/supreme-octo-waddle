@@ -1,0 +1,26 @@
+.free-shipping-banner {
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+	background: rgb(var(--color-background-contrast));
+	color: rgb(var(--color-foreground));
+	text-align: center;
+	padding: .8rem 1.2rem;
+	font-size: 1.3rem;
+	font-weight: 500;
+	letter-spacing: .04rem
+}
+
+.free-shipping-banner {
+	animation: slideDown .25s ease-out
+}
+
+@keyframes slideDown {
+	from {
+		transform: translateY(-100%)
+	}
+
+	to {
+		transform: translateY(0)
+	}
+}
