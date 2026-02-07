@@ -1,0 +1,20 @@
+{% assign free_shipping_threshold = 7500 %}
+{% assign amount_left = free_shipping_threshold | minus: cart.total_price %}
+
+{% if cart != empty %}
+  {% if amount_left > 0 %}
+    <div class="cart-free-shipping-message" role="status" aria-live="polite">
+      You are <strong>{{ amount_left | money }}</strong> away from free shipping.
+      Add more items to receive free shipping on orders over
+      <strong>$75.00 USD</strong>.
+    </div>
+  {% else %}
+    <div
+      class="cart-free-shipping-message cart-free-shipping-message--success"
+      role="status"
+      aria-live="polite"
+    >
+      🎉 You’ve qualified for <strong>free shipping!</strong>
+    </div>
+  {% endif %}
+{% endif %}
