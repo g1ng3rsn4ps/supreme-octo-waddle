@@ -1,0 +1,14 @@
+{% unless request.path contains '/checkout' %}
+  {% if cart.item_count > 0 %}
+    {% assign free_shipping_threshold = 7500 %}
+    {% assign amount_left = free_shipping_threshold | minus: cart.total_price %}
+
+    <div class="free-shipping-banner" role="status" aria-live="polite">
+      {% if amount_left > 0 %}
+        🚚 You’re <strong>{{ amount_left | money }}</strong> away from free shipping
+      {% else %}
+        🎉 You’ve qualified for <strong>free shipping!</strong>
+      {% endif %}
+    </div>
+  {% endif %}
+{% endunless %}
